@@ -1,0 +1,19 @@
+[user]
+name = Mugdha Arunim Ahmed
+email = mugdhaarunimahmed2017@gmail.com
+signingkey = BB1159F72A394B57D3D43EDD38EADA055647E92A
+
+[init]
+defaultBranch = main
+
+[credential "https://github.com"]
+helper =
+helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+helper =
+helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gitlab.com"]
+helper =
+helper = !/usr/bin/glab auth git-credential

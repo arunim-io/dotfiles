@@ -1,0 +1,50 @@
+# shellcheck shell=bash
+
+#list
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias ll='ls -alFh'
+alias l='ls'
+alias l.="ls -A | egrep '^\.'"
+
+#free
+alias free="free -mt"
+
+#continue download
+alias wget="wget -c"
+
+#grub update
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+#add new fonts
+alias update-fc='sudo fc-cache -fv'
+
+#hardware info --short
+alias hw="hwinfo --short"
+
+#get the error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
+#editor for important configuration files
+#know what you do in these files
+alias ngrub='sudo $EDITOR /etc/default/grub'
+alias nconfgrub='sudo $EDITOR /boot/grub/grub.cfg'
+alias nfstab='sudo $EDITOR /etc/fstab'
+alias nsamba='sudo $EDITOR /etc/samba/smb.conf'
+alias nhosts='sudo $EDITOR /etc/hosts'
+alias nzsh='$EDITOR ~/.zshrc'
+alias nstarship='$EDITOR ~/.config/starship.toml'
+alias naliases='$EDITOR ~/.aliases.sh'
+alias nprofile='$EDITOR ~/.profile'
+
+#maintenance
+alias big="expac -H M '%m\t%n' | sort -h | nl"
+
+#remove
+alias rm='rm -rf'
+alias rmgitcache="rm -r ~/.cache/git"
+
+#pnpm
+alias pnx="pnpm nx --"
+
+eval "$(thefuck --alias oops)"
