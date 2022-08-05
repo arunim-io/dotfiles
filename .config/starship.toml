@@ -1,0 +1,31 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline     = true
+command_timeout = 1000
+scan_timeout    = 80
+
+[character]
+error_symbol   = "[➜](bold red)"
+success_symbol = "[➜](bold green)"
+
+[cmd_duration]
+format            = "took [$duration](bold blue)"
+show_milliseconds = true
+
+[git_branch]
+always_show_remote = true
+format             = "on [$symbol$branch(:$remote_branch)]($style) "
+
+[package]
+disabled = true
+
+[sudo]
+allow_windows = true
+disabled      = false
+
+[username]
+disabled    = false
+format      = "[$user]($style) at "
+show_always = true
+style_root  = "red bold"
+style_user  = "green bold"
