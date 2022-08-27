@@ -8,6 +8,7 @@ plugins=(
   dnf
   extract
   poetry
+  poe
   glab
   colorize
   sudo
