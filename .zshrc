@@ -16,10 +16,7 @@ plugins=(
   vscode
   docker
   docker-compose
-  yarn
   volta
-  composer
-  laravel
   flutter
   gh
   web-search
