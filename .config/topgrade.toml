@@ -63,7 +63,7 @@ repos = [
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 "pnpm" = "pnpm add -g pnpm"
-"grub"="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
+# "grub"="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
 "clean-caches"="sudo dnf clean all; pnpm store prune; npm cache clean -f; pip cache purge"
 [brew]
 #greedy_cask = true
