@@ -36,6 +36,7 @@ alias nzsh='$EDITOR ~/.zshrc'
 alias nstarship='$EDITOR ~/.config/starship.toml'
 alias naliases='$EDITOR ~/.aliases.sh'
 alias nprofile='$EDITOR ~/.profile'
+alias ntopgrade='$EDITOR ~/.config/topgrade.toml'
 
 #maintenance
 alias big="expac -H M '%m\t%n' | sort -h | nl"

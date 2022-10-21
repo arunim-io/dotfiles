@@ -37,7 +37,7 @@ unsetopt SHARE_HISTORY
 neofetch
 
 eval "$(starship init zsh)"
+eval "$(register-python-argcomplete pipx)"
 
 # tabtab source for packages
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
-
