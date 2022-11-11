@@ -42,8 +42,8 @@ cleanup = true
 # Additional git repositories to pull
 repos = [
      "~/.cfg",
-#    "~/src/*/",
-#    "~/.config/something"
+     #    "~/src/*/",
+     #    "~/.config/something"
 ]
 
 # Don't pull the predefined git repos
@@ -62,9 +62,9 @@ repos = [
 # Custom commands
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
-"pnpm" = "pnpm add -g pnpm"
-# "grub"="sudo grub2-mkconfig -o /boot/grub2/grub.cfg"
-"clean-caches"="sudo dnf clean all; pnpm store prune; npm cache clean -f; pip cache purge"
+"clean-caches" = "sudo dnf clean all; pnpm store prune; npm cache clean -f; pip cache purge"
+"poetry"       = "poetry self update --preview"
+
 [brew]
 #greedy_cask = true
 
