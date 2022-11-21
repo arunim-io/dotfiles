@@ -19,6 +19,8 @@ export PATH="$PATH":"$HOME/Android/Sdk/platform-tools"
 export PATH="$PATH":"$HOME/Android/Sdk/cmdline-tools/latest/bin"
 export PATH="$PATH":"$HOME/Android/Sdk/tools"
 
+export PATH="$PATH":"$HOME/.fly/bin"
+
 # shellcheck source=/dev/null
 . "$HOME/.cargo/env"
 

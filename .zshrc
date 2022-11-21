@@ -25,6 +25,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+autoload -Uz compinit
+fpath+=~/.zfunc
+
 _dotbare_completion_cmd && _dotbare_completion_git
 
 setopt GLOB_DOTS
@@ -34,10 +37,10 @@ unsetopt SHARE_HISTORY
 
 [[ -f ~/.aliases.sh ]] && . ~/.aliases.sh
 
-neofetch
-
 eval "$(starship init zsh)"
 eval "$(register-python-argcomplete pipx)"
 
 # tabtab source for packages
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+neofetch
