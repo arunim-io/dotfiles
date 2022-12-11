@@ -9,7 +9,6 @@ plugins=(
   extract
   poetry
   poe
-  glab
   colorize
   sudo
   autojump
