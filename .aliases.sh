@@ -1,14 +1,18 @@
-# shellcheck shell=bash
-
 #list
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -alFh'
-alias l='ls'
-alias l.="ls -A | egrep '^\.'"
+alias ls='exa --color=auto'
+alias la='exa -a'
+alias ll='exa -alFh'
+alias l='exa'
+alias l.="exa -A | egrep '^\.'"
+
+# view
+alias cat='bat'
 
 #free
 alias free="free -mt"
+
+# find
+alias find="fd"
 
 #continue download
 alias wget="wget -c"

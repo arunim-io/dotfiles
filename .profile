@@ -10,6 +10,7 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+export NODE_PATH="$VOLTA_HOME/bin/node"
 
 export PATH="$PATH":"$HOME/.local/opt/flutter/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
