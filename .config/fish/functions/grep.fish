@@ -1,4 +1,4 @@
-function grep --wraps=ripgrep --description 'alias grep=ripgrep'
-  ripgrep $argv
+function grep --wraps=ripgrep --wraps=rg --description 'alias grep=rg'
+  rg $argv
         
 end

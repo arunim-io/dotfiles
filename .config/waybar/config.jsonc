@@ -1,9 +1,9 @@
 {
+	"output": ["eDP-1"],
 	"layer": "top",
 	"position": "top",
-	"modules-left": ["tray"],
-	"modules-center": ["hyprland/window"],
-	"modules-right": ["pulseaudio", "network", "cpu", "memory", "clock", "battery"],
+	"modules-left": ["hyprland/window"],
+	"modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "clock", "battery"],
 	"hyprland/window": {
 		"format": "➡ {}",
 		"separate-outputs": true
