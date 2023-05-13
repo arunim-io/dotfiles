@@ -2,7 +2,7 @@
 	"output": ["eDP-1"],
 	"layer": "top",
 	"position": "top",
-	"modules-left": ["hyprland/window"],
+	"modules-left": ["wlr/workspaces", "hyprland/window"],
 	"modules-right": ["tray", "pulseaudio", "network", "cpu", "memory", "clock", "battery"],
 	"hyprland/window": {
 		"format": "➡ {}",
