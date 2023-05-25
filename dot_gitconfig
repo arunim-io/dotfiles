@@ -1,0 +1,18 @@
+[user]
+name = Mugdha Arunim Ahmed
+email = mugdhaarunimahmed2017@gmail.com
+
+[init]
+defaultBranch = main
+
+[credential "https://github.com"]
+helper =
+helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+helper =
+helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gitlab.com"]
+helper =
+helper = !/usr/bin/glab auth git-credential

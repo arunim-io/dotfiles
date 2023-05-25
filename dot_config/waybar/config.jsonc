@@ -1,0 +1,110 @@
+{
+  "output": [
+    "eDP-1"
+  ],
+  "layer": "top",
+  "position": "top",
+  "spacing": "5",
+  "modules-left": [
+    "wlr/workspaces",
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "mpris",
+    "network",
+    "cpu",
+    "memory",
+    "clock",
+    "battery"
+  ],
+  "hyprland/window": {
+    "format": "➡ {}",
+    "separate-outputs": true
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%Y-%m-%d %H:%M:%S}",
+    "format-alt": "{:%Y-%m-%d}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "mpris": {
+    "format": "{status_icon}  {player_icon} {title}",
+    "player-icons": {
+      "default": "",
+      "spotify": ""
+    },
+    "status-icons": {
+      "playing": "",
+      "paused": ""
+    },
+    "ignored-players": [
+      "firefox"
+    ]
+  },
+  "wlr/workspaces": {
+    "on-click": "activate"
+  },
+  "cpu": {
+    "interval": "1",
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "interval": "1",
+    "format": "{}% "
+  },
+  "battery": {
+    "interval": "1",
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "network": {
+    "interval": "1",
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ipaddr}",
+    "tooltip-format": "Interface: {ifname}\rIP Address: {gwaddr}",
+    "format-linked": " {ifname}",
+    "format-disconnected": "⚠ Disconnected"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " Muted {format_source}",
+    "format-source": "-  {volume}%",
+    "format-source-muted": " Muted",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  }
+}
