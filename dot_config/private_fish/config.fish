@@ -7,7 +7,7 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 
 set -gx BROWSER "/usr/bin/firefox"
 set -gx EDITOR "nvim"
-set -gx VISUAL "code"
+set -gx VISUAL "nvim"
 set -gx PAGER "most"
 
 starship init fish | source
