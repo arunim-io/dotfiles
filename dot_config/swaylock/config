@@ -1,0 +1,11 @@
+#options
+ignore-empty-password
+show-failed-attempts
+color=241F31
+
+#apperance
+hide-keyboard-layout
+indicator-caps-lock
+indicator-idle-visible
+indicator-radius=100
+indicator-thickness=10
