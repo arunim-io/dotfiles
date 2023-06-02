@@ -1,110 +1,40 @@
-@import "themes/catppuccin/mocha.css";
+@define-color primary #148a56;
+@define-color secondary #1c71d8;
+@define-color tertiary #e66100;
+@define-color success #20742e;
+@define-color warning #f5c211;
+@define-color error #c01c28;
+@define-color surface #241f31;
+@define-color surface_alt #1b1725;
 
 window#waybar {
-  font-family: "Ubuntu", "FontAwesome", sans-serif;
+  background: @surface;
+  font-family: "Ubuntu", "FontAwesome", "Symbols Nerd Font", sans-serif;
   font-size: 15px;
-  background-color: @base;
-  color: @text;
-  transition-property: background-color;
-  transition-duration: 0.5s;
 }
 
-window#waybar.hidden {
-  opacity: 0.2;
+.modules-right {
+  background: @surface_alt;
+  padding-left: 10px;
 }
 
-window#waybar.termite {
-  background-color: #3f3f3f;
+#battery {
+  padding-right: 10px;
 }
 
-window#waybar.chromium {
-  background-color: black;
-  border: none;
+#battery.charging {
+  background: @success;
 }
 
-button {
-  box-shadow: inset 0 -3px transparent;
-  border: none;
-  border-radius: 0;
+#battery.warning {
+  background: @warning;
 }
 
-#workspaces button {
-  padding: 0 5px;
-  border-radius: 5em / 5em;
-  background-color: @surface0;
-  color: @peach;
-  margin: 2px;
-  font-weight: bold;
+#battery.critical, #network.disconnected {
+  background: @error;
 }
 
 #workspaces button.active {
-  background-color: @surface1;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#network,
-#pulseaudio,
-#mpris {
-  padding: 0 10px;
-  color: @peach;
-  background-color: @surface0;
-  font-weight: bold;
-  border-right: 1px solid @surface1;
-}
-
-#tray {
-  padding: 0 10px;
-}
-
-#memory {
-  color: @yellow;
-}
-
-#window,
-#workspaces {
-  margin: 0 4px;
-  background-color: transparent;
-  font-weight: bold;
-  border-radius: 5em / 5em;
-  padding: 0 10px;
-  color: @peach;
-}
-
-#workspaces {
-  margin-left: 0;
-}
-
-#clock {
-  /* border-top-right-radius: 5em 5em;
-	border-bottom-right-radius: 5em 5em; */
-  color: @sky;
-}
-
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
-}
-
-label:focus {
-  background-color: #000000;
-}
-
-#network.disconnected {
-  background-color: #f53c3c;
-}
-
-#pulseaudio {
-  border-top-left-radius: 5em 5em;
-  border-bottom-left-radius: 5em 5em;
-  color: @pink;
-}
-
-#pulseaudio.muted {
-  background-color: #90b1b1;
-  color: #2a5c45;
+  background: @surface_alt;
+  color: white;
 }
