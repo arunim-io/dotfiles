@@ -20,7 +20,7 @@ skip_notify = true
 
 # Run `sudo -v` to cache credentials at the start of the run; this avoids a
 # blocking password prompt in the middle of a possibly-unattended run.
-pre_sudo = false
+pre_sudo = true
 
 # Run inside tmux
 #run_in_tmux = true
@@ -41,7 +41,7 @@ pre_sudo = false
 #set_title = false
 
 # Display the time in step titles
-# display_time = true
+display_time = true
 
 # Cleanup temporary or old files
 cleanup = true
@@ -50,7 +50,6 @@ cleanup = true
 #max_concurrency = 5
 # Additional git repositories to pull
 repos = [
-  "~/.cfg",
   "~/.config/wallpapers",
   #    "~/src/*/",
   #    "~/.config/something"

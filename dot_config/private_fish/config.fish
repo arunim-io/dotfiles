@@ -10,6 +10,11 @@ set -gx EDITOR "nvim"
 set -gx VISUAL "nvim"
 set -gx PAGER "most"
 
+# Keybind for Control+Backspace
+bind \b 'backward-kill-word'
+# Keybind for Control+Delete
+bind \e\[3\;5~ 'kill-word'
+
 starship init fish | source
 
 
