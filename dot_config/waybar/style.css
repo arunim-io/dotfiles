@@ -8,18 +8,39 @@
 @define-color surface_alt #1b1725;
 
 window#waybar {
-  background: @surface;
+  background: transparent;
   font-family: "Ubuntu", "FontAwesome", "Symbols Nerd Font", sans-serif;
   font-size: 15px;
 }
 
 .modules-right {
-  background: @surface_alt;
+  background: @surface;
   padding-left: 10px;
 }
 
 #battery {
   padding-right: 10px;
+}
+
+#pulseaudio {
+  color: white;
+}
+
+#pulseaudio.output.muted,
+#pulseaudio.input.source-muted {
+  color: @warning;
+}
+
+#clock,
+#backlight,
+#memory,
+#cpu,
+#network,
+#bluetooth,
+#pulseaudio,
+#mpris {
+  padding-left: 2.5px;
+  padding-right: 2.5px;
 }
 
 #battery.charging {
@@ -30,8 +51,13 @@ window#waybar {
   background: @warning;
 }
 
-#battery.critical, #network.disconnected {
+#battery.critical,
+#network.disconnected {
   background: @error;
+}
+
+#workspaces {
+  background: @surface;
 }
 
 #workspaces button.active {
