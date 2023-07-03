@@ -2,20 +2,12 @@ local wezterm = require 'wezterm'
 
 local config = {}
 
+
 -- Some defaults
 
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
-
--- wezterm.mux
-
-local mux = wezterm.mux
-
-wezterm.on('gui-startup', function()
-  local tab, pane, window = mux.spawn_window {}
-  window:gui_window():maximize()
-end)
 
 
 -- Keybindings
@@ -23,12 +15,14 @@ end)
 local actions = wezterm.action
 
 config.keys = {
-  { key = 'p',   mods = 'CTRL|SHIFT', action = actions.ActivateCommandPalette },
-  { key = 'c',   mods = 'CTRL',       action = actions.CopyTo 'Clipboard' },
-  { key = 'p',   mods = 'CTRL',       action = actions.PasteFrom 'Clipboard' },
+  { key = 'F1',  mods = 'NONE',       action = actions.ActivateCommandPalette },
+  { key = 'c',   mods = 'CTRL|SHIFT', action = actions.CopyTo 'Clipboard' },
+  { key = 'p',   mods = 'CTRL|SHIFT', action = actions.PasteFrom 'Clipboard' },
   { key = 'F11', mods = 'NONE',       action = actions.ToggleFullScreen, },
   { key = 'q',   mods = 'CTRL|SHIFT', action = actions.QuitApplication },
+  { key = 'w',   mods = 'ALT',        action = actions.ShowLauncherArgs { flags = "FUZZY|WORKSPACES" } },
 }
+
 
 -- UI Customizations
 
