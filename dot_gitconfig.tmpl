@@ -1,0 +1,13 @@
+[user]
+name = Mugdha Arunim Ahmed
+email = mugdhaarunimahmed2017@gmail.com
+
+[init]
+defaultBranch = main
+
+[credential "https://github.com"]
+helper = {{ if eq .chezmoi.osRelease.id "nixos" }} !/etc/profiles/per-user/arunim/bin/gh {{ else }} !/usr/bin/gh {{ end }} auth git-credential
+
+[credential "https://gist.github.com"]
+helper = {{ if eq .chezmoi.osRelease.id "nixos" }} !/etc/profiles/per-user/arunim/bin/gh {{ else }} !/usr/bin/gh {{ end }} auth git-credential
+
