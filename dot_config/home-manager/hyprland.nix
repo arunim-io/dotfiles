@@ -1,6 +1,4 @@
-{ inputs, pkgs, ... }:
-
-{
+{ inputs, pkgs, ... }: {
   home.packages = with pkgs; [
     xdg-desktop-portal-hyprland
     copyq
@@ -23,8 +21,6 @@
 
   programs.waybar = {
     enable = true;
-    package = pkgs.waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-    });
+    package = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
   };
 }

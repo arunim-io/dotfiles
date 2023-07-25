@@ -1,7 +1,5 @@
-{ config, pkgs, ... }:
-
-{
-  imports = [ ./hyprland.nix ];
+{ config, pkgs, ... }: {
+  imports = [ ./hyprland.nix ./neovim.nix ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -37,7 +35,6 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     jetbrains-mono
-	  neovim
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
