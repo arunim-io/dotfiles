@@ -9,18 +9,20 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25%;
-  border: none;
   background-color: rgba(27, 23, 37, 0.5);
+  color: white;
   margin: 5px;
   transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 button:hover {
   background-color: rgba(49, 50, 68, 0.1);
+  color: white;
 }
 
 button:focus {
   background-color: #148a56;
+  color: white;
 }
 
 #lock {

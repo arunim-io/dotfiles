@@ -1,11 +1,10 @@
-[misc]
-# Don't ask for confirmations
+# Don't ask for confirmation
 assume_yes = true
-
 skip_notify = true
 
 # Disable specific steps - same options as the command line flag
 #disable = ["system", "emacs"]
+disable = ["flutter"]
 
 # Ignore failures for these steps
 #ignore_failures = ["oh-my-zsh"]
@@ -50,11 +49,10 @@ cleanup = true
 [git]
 #max_concurrency = 5
 # Additional git repositories to pull
-repos = [
-  "~/.config/wallpapers",
-  #    "~/src/*/",
-  #    "~/.config/something"
-]
+# repos = [
+#    "~/src/*/",
+#    "~/.config/something"
+# ]
 
 # Don't pull the predefined git repos
 #pull_predefined = false
@@ -72,8 +70,6 @@ repos = [
 # Custom commands
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
-"clean-caches" = "sudo dnf clean all; pnpm store prune; npm cache clean -f; pip cache purge"
-"poetry" = "poetry self update --preview"
 
 [brew]
 #greedy_cask = true
@@ -103,7 +99,7 @@ repos = [
 
 [python]
 #enable_pip_review = true   ###disabled by default
-#enable_pipupgrade = true   ###disabled by default
+#enable_pipupgrade = true   ###disabled by defaul
 
 [windows]
 # Manually select Windows updates
@@ -123,7 +119,7 @@ repos = [
 
 [firmware]
 # Offer to update firmware; if false just check for and display available updates
-upgrade = true
+upgrade = false
 
 [flatpak]
 # Use sudo for updating the system-wide installation

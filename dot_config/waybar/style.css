@@ -11,10 +11,11 @@ window#waybar {
   background: transparent;
   font-family: "Ubuntu", "FontAwesome", "Symbols Nerd Font", sans-serif;
   font-size: 15px;
+  color: white;
 }
 
 .modules-right {
-  background: @surface;
+  background: #241f31;
   padding-left: 10px;
 }
 
@@ -45,19 +46,23 @@ window#waybar {
 
 #battery.charging {
   background: @success;
+  color: white;
 }
 
 #battery.warning {
   background: @warning;
+  color: white;
 }
 
 #battery.critical,
 #network.disconnected {
   background: @error;
+  color: white;
 }
 
 #workspaces {
-  background: @surface;
+  background: #241f31;
+  color: white;
 }
 
 #workspaces button.active {

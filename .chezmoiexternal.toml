@@ -2,3 +2,9 @@
 type = 'git-repo'
 url = "https://github.com/arunim-io/neovim-config"
 refreshPeriod = '168h'
+
+
+['.config/wallpapers']
+type = 'git-repo'
+url = "https://github.com/arunim-io/wallpapers"
+refreshPeriod = '24h'

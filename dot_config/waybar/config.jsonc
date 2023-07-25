@@ -144,9 +144,6 @@
     "separate-outputs": true
   },
   "wlr/workspaces": {
-    "hyprland/window": {
-      "separate-outputs": true
-    },
     "on-click": "activate"
   }
 }
