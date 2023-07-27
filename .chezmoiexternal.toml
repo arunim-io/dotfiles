@@ -3,6 +3,10 @@ type = 'git-repo'
 url = "https://github.com/arunim-io/neovim-config"
 refreshPeriod = '168h'
 
+['.config/tmux/plugins/tpm']
+type = 'git-repo'
+url = 'https://github.com/tmux-plugins/tpm'
+refreshPeriod = '24h'
 
 ['.config/wallpapers']
 type = 'git-repo'
