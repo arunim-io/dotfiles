@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./hyprland.nix ./neovim.nix ./flutter.nix ./theming.nix ];
+  imports = [ ./hyprland.nix ./neovim.nix ./theming.nix ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -37,8 +37,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    distrobox
-    direnv
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

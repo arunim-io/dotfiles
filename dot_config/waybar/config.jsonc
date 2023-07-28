@@ -1,14 +1,9 @@
 {
-  "output": [
-    "eDP-1"
-  ],
+  "output": ["eDP-1"],
   "layer": "top",
   "position": "top",
   "spacing": 10,
-  "modules-left": [
-    "wlr/workspaces",
-    "hyprland/window"
-  ],
+  "modules-left": ["wlr/workspaces", "hyprland/window"],
   "modules-right": [
     "tray",
     "mpris",
@@ -33,13 +28,7 @@
     "format": "{capacity}% {icon}",
     "format-plugged": "{capacity}% ",
     "format-charging": "{capacity}% ",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", "", "", ""]
   },
   "clock": {
     "interval": 1,
@@ -64,17 +53,7 @@
     "scroll-step": 10,
     "tooltip": false,
     "format": "{percent}% {icon}",
-    "format-icons": [
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " "
-    ]
+    "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   },
   "memory": {
     "interval": "1",
@@ -94,10 +73,7 @@
     "status-icons": {
       "playing": "",
       "paused": ""
-    },
-    "ignored-players": [
-      "firefox"
-    ]
+    }
   },
   "network": {
     "interval": "1",
@@ -119,11 +95,7 @@
     "format": "{icon} {volume}%",
     "format-muted": " Muted",
     "format-icons": {
-      "default": [
-        "",
-        " ",
-        " "
-      ],
+      "default": ["", " ", " "],
       "headphone": " ",
       "phone": "",
       "hands-free": "",
