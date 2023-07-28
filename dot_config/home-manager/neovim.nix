@@ -8,7 +8,7 @@
     nodePackages.vscode-langservers-extracted
     lua-language-server
     nodePackages.pyright
-    python311Packages.ruff-lsp
+    ruff
     taplo
     nodePackages.svelte-language-server
     nodePackages.yaml-language-server
@@ -20,6 +20,7 @@
     nil
     nixpkgs-fmt
     statix
+    nodePackages.dockerfile-language-server-nodejs
   ];
 
   programs.neovim = {

@@ -1,11 +1,14 @@
 { pkgs, ... }: {
-  imports = [ ./hyprland.nix ./neovim.nix ];
+  imports = [ ./hyprland.nix ./neovim.nix ./flutter.nix ./theming.nix ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "arunim";
   home.homeDirectory = "/home/arunim";
 
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -34,7 +37,8 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    jetbrains-mono
+    distrobox
+    direnv
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
