@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }:
+let
+  waybar = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
+  grimblast = inputs.hyprland-contrib.packages.${pkgs.system}.grimblast;
+in
+{
   home.packages = with pkgs; [
     xdg-desktop-portal-hyprland
     copyq
@@ -13,14 +18,13 @@
     wl-clipboard
     swaylock-effects
     font-awesome
-    ubuntu_font_family
     rofi
     networkmanagerapplet
-    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    grimblast
   ];
 
   programs.waybar = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
+    package = waybar;
   };
 }

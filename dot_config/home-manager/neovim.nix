@@ -1,5 +1,7 @@
-{ inputs, pkgs, ... }: {
-  home.packages = with pkgs; [
+{ inputs, pkgs, ... }:
+let
+  neovim = inputs.neovim-nightly.packages.${pkgs.system}.neovim;
+  packages = with pkgs; [
     tree-sitter
     fd
     ripgrep
@@ -22,14 +24,17 @@
     statix
     nodePackages.dockerfile-language-server-nodejs
   ];
-
+in
+{
+  home.packages = packages;
   programs.neovim = {
-    defaultEditor = true;
     enable = true;
+    package = neovim;
+    defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    package = inputs.neovim-nightly.packages.${pkgs.system}.neovim;
     withNodeJs = true;
     withPython3 = true;
+    withRuby = false;
   };
 }
