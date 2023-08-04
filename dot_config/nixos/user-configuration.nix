@@ -14,28 +14,16 @@
       xfce.thunar-archive-plugin
       uget
       chezmoi
-      wezterm
-      vscode-fhs
-      neofetch
-      tmux
       starship
-      rustup
-      poetry
-      nodejs
-      nodePackages.pnpm
-      watchman
-      lazygit
+      neofetch
       exa
       ripgrep
       bottom
       rm-improved
       zoxide
       bat
-      gh
       topgrade
       aria2
-      android-studio
-      android-tools
     ];
     shell = pkgs.fish;
   };

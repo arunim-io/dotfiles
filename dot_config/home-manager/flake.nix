@@ -22,18 +22,14 @@
   outputs = { nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
       homeConfigurations."arunim" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
         modules = [ ./home.nix ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
         extraSpecialArgs = { inherit inputs; };
       };
     };
