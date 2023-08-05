@@ -2,10 +2,9 @@
   description = "Home Manager configuration of arunim";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
@@ -19,18 +18,14 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
-    let
-      system = "x86_64-linux";
-    in
-    {
-      homeConfigurations."arunim" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
-        modules = [ ./home.nix ];
-        extraSpecialArgs = { inherit inputs; };
+  outputs = { nixpkgs, home-manager, ... }@inputs: {
+    homeConfigurations."arunim" = home-manager.lib.homeManagerConfiguration {
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
       };
+      modules = [ ./home.nix ];
+      extraSpecialArgs = { inherit inputs; };
     };
+  };
 }

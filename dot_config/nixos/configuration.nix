@@ -4,11 +4,11 @@
 
 { ... }: {
   imports = [
+    ./cachix.nix
     ./hardware-configuration.nix
     ./system-configuration.nix
     ./software-configuration.nix
     ./user-configuration.nix
-    ./cachix.nix
   ];
 
   nix = {
@@ -28,5 +28,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
+  system.stateVersion = "23.11"; # Did you read the comment?
 }
