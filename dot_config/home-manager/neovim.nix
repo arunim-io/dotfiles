@@ -2,6 +2,7 @@
 let
   neovim = inputs.neovim-nightly.packages.${pkgs.system}.neovim;
   packages = with pkgs; [
+    # djlint - handled with pipx
     tree-sitter
     fd
     ripgrep
@@ -14,15 +15,15 @@ let
     taplo
     nodePackages.svelte-language-server
     nodePackages.yaml-language-server
-    # djlint
     dotenv-linter
     editorconfig-checker
     black
-    nodePackages.prettier # replace with prettierd
+    prettierd
     nil
     nixpkgs-fmt
     statix
     nodePackages.dockerfile-language-server-nodejs
+    nodePackages."@tailwindcss/language-server"
   ];
 in
 {
