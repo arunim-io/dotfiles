@@ -1,14 +1,14 @@
 { pkgs, ... }: {
   environment = {
-    shells = with pkgs; [ fish ];
+    shells = with pkgs; [ bash fish ];
     systemPackages = with pkgs; [ git wget python3 most gnumake gcc pulseaudio nettools ];
   };
 
-  users.users.arunim = {
+  users.users.arunim = with pkgs; {
     isNormalUser = true;
     description = "Mugdha Arunim Ahmed";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
+    packages = [
       firefox-bin
       xfce.thunar
       xfce.thunar-archive-plugin
@@ -28,5 +28,8 @@
     shell = pkgs.fish;
   };
 
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    useBabelfish = true;
+  };
 }
