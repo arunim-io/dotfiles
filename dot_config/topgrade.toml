@@ -1,3 +1,4 @@
+[misc]
 # Don't ask for confirmation
 assume_yes = true
 skip_notify = true
