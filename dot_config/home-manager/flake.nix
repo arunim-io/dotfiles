@@ -16,15 +16,16 @@
       url = "github:neovim/neovim?dir=contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify.url = "github:the-argus/spicetify-nix";
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, spicetify, ... }@inputs: {
     homeConfigurations."arunim" = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs {
         system = "x86_64-linux";
         config.allowUnfree = true;
       };
-      modules = [ ./home.nix ];
+      modules = [ ./home.nix spicetify.homeManagerModule ];
       extraSpecialArgs = { inherit inputs; };
     };
   };

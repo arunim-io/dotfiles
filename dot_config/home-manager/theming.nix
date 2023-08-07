@@ -6,12 +6,15 @@
     ubuntu_font_family
   ];
   fonts.fontconfig.enable = true;
-  gtk = {
+  gtk = with pkgs; {
     enable = true;
-    font.name = "Ubuntu";
+    font = {
+      name = "Ubuntu";
+      package = ubuntu_font_family;
+    };
     theme = {
       name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
+      package = adw-gtk3;
     };
   };
   qt = {

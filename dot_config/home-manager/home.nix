@@ -1,5 +1,5 @@
 { ... }: {
-  imports = [ ./hyprland.nix ./neovim.nix ./theming.nix ./coding.nix ];
+  imports = [ ./hyprland.nix ./neovim.nix ./theming.nix ./spotify.nix ./coding.nix ];
 
   home = {
     username = "arunim";
