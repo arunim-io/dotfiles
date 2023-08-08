@@ -1,6 +1,5 @@
 { inputs, pkgs, ... }:
 let
-  waybar = inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
   grimblast = inputs.hyprland-contrib.packages.${pkgs.system}.grimblast;
 in
 {
@@ -18,13 +17,13 @@ in
     wl-clipboard
     swaylock-effects
     font-awesome
-    rofi
+    rofi-wayland
     networkmanagerapplet
     grimblast
   ];
 
   programs.waybar = {
     enable = true;
-    package = waybar;
+    package = pkgs.waybar-hyprland;
   };
 }
