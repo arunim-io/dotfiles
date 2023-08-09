@@ -1,15 +1,16 @@
 { ... }: {
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    layout = "us";
-    xkbVariant = "";
-  };
-
   services = {
+    xserver = {
+      enable = true;
+      displayManager.gdm.enable = true;
+      layout = "us";
+      xkbVariant = "";
+    };
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
   };
+
+  security.pam.services.swaylock = { };
 
   programs.hyprland = {
     enable = true;
