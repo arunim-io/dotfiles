@@ -1,2 +1,8 @@
 README.md
 LICENSE
+
+{{- if ne .chezmoi.os "linux" }}
+*
+!/.config/topgrade.toml
+!/.config/starship.toml
+{{- end }}

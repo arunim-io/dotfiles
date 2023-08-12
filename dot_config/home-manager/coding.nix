@@ -10,8 +10,5 @@
     nodePackages.pnpm
     lazygit
     gh
-    flutter
-    android-studio
-    android-tools
   ];
 }

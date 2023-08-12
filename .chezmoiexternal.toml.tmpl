@@ -1,8 +1,4 @@
-['.config/nvim']
-type = 'git-repo'
-url = "https://github.com/arunim-io/neovim-config"
-refreshPeriod = '168h'
-
+{{- if eq .chezmoi.os 'linux' }}
 ['.config/tmux/plugins/tpm']
 type = 'git-repo'
 url = 'https://github.com/tmux-plugins/tpm'
@@ -12,3 +8,4 @@ refreshPeriod = '24h'
 type = 'git-repo'
 url = "https://github.com/arunim-io/wallpapers"
 refreshPeriod = '24h'
+{{- end }}
