@@ -73,7 +73,8 @@
     "status-icons": {
       "playing": "",
       "paused": ""
-    }
+    },
+    "ignored-players": ["firefox"]
   },
   "network": {
     "interval": "1",
