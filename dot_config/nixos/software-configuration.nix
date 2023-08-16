@@ -14,10 +14,7 @@
 
   programs.hyprland = {
     enable = true;
-    xwayland = {
-      enable = true;
-      hidpi = false;
-    };
+    xwayland.enable = true;
   };
 
   virtualisation.podman = {
