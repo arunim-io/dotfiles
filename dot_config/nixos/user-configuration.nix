@@ -24,6 +24,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = [
       firefox-bin
+      zoom-us
       xfce.thunar
       xfce.thunar-archive-plugin
       uget
