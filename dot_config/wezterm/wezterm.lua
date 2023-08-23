@@ -36,6 +36,8 @@ config.window_frame = {
   font = wezterm.font { family = 'Ubuntu' }
 }
 
+config.font = wezterm.font_with_fallback { 'JetBrains Mono', 'Symbols Nerd Font Mono', 'Font Awesome 6' }
+
 config.window_background_opacity = 0.75
 
 config.tab_bar_at_bottom = true
