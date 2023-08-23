@@ -28,6 +28,7 @@
       xfce.thunar
       xfce.thunar-archive-plugin
       uget
+      stacer
       chezmoi
       starship
       fastfetch
