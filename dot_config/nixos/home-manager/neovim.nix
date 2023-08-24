@@ -30,10 +30,10 @@ let
   ];
 in
 {
-  home.packages = packages;
   programs.neovim = {
     enable = true;
     package = neovim;
+    extraPackages = packages;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
