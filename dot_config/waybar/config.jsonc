@@ -3,7 +3,7 @@
   "layer": "top",
   "position": "top",
   "spacing": 10,
-  "modules-left": ["wlr/workspaces", "hyprland/window"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-right": [
     "tray",
     "mpris",
@@ -115,8 +115,5 @@
   },
   "hyprland/window": {
     "separate-outputs": true
-  },
-  "wlr/workspaces": {
-    "on-click": "activate"
   }
 }
