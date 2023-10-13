@@ -9,11 +9,6 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 
--- Core
-
-config.default_prog = { 'fish', '-l' }
-
-
 -- Keybindings
 
 local actions = wezterm.action
