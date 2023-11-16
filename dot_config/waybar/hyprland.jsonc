@@ -1,0 +1,12 @@
+{
+  "include": [
+    "~/.config/waybar/base.jsonc"
+  ],
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "hyprland/window": {
+    "separate-outputs": true
+  }
+}
